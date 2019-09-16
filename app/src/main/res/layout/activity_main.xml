@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/workLayout">
+
+        <Button
+            android:id="@+id/buttonVisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="becomeVisible"
+            android:text="Become Visible" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="findDevices"
+            android:text="Discover" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unpaired Devices" />
+
+        <ListView
+            android:id="@+id/unpairdeList"
+            android:layout_width="match_parent"
+            android:layout_height="195dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendImageConfirmation"
+            android:text="Send Image" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="refreshList"
+            android:text="Refresh" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paired Devices" />
+
+        <ListView
+            android:id="@+id/lv_paired_devices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@style/ListTheme">
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make sure Device is paired"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewTemp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        android:visibility="invisible"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shadeView"
+        android:background="#7fafafaf"
+        android:visibility="invisible">
+    </View>
+    <ProgressBar
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:id="@+id/loadingScreen"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
